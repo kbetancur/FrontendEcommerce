@@ -5,19 +5,19 @@
       ><i class="material-icons">menu</i></a
     >
     <ul class="right hide-on-med-and-down">
-      <li><a routerLink="/administracion/usuarios">Usuarios</a></li>
-      <li><a routerLink="/administracion/productos">Productos</a></li>
-      <li><a routerLink="/administracion/categorias">Categorias</a></li>
-      <li><a routerLink="/seguridad/login">Login</a></li>
-      <li><a routerLink="/seguridad/cambiar-clave">Cambiar Clave</a></li>
+      <li *ngIf="seInicioSesion"><a routerLink="/administracion/usuarios">Usuarios</a></li>
+      <li *ngIf="seInicioSesion"><a routerLink="/administracion/productos">Productos</a></li>
+      <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/login">Login</a></li>
+      <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesión</a></li>
+      <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambiar-clave">Cambiar Clave</a></li>
     </ul>
   </div>
 </nav>
 
 <ul class="sidenav" id="mobile-demo">
-  <li><a routerLink="/administracion/usuarios">Usuarios</a></li>
-  <li><a routerLink="/administracion/productos">Productos</a></li>
-  <li><a routerLink="/administracion/categorias">Categorias</a></li>
-  <li><a routerLink="/seguridad/login">Login</a></li>
-  <li><a routerLink="/seguridad/cambiar-clave">Cambiar Clave</a></li>
+  <li *ngIf="seInicioSesion"><a routerLink="/administracion/usuarios">Usuarios</a></li>
+  <li *ngIf="seInicioSesion"><a routerLink="/administracion/productos">Productos</a></li>
+  <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/login">Login</a></li>
+  <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerarSesion">Cerrar Sesión</a></li>
+  <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambiar-clave">Cambiar Clave</a></li>
 </ul>

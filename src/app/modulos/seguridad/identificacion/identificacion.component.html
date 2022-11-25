@@ -3,32 +3,30 @@
 <body ng-app="mainModule" ng-controller="mainController">
     <div id="login-page" class="row">
         <div class="col s12 z-depth-6 card-panel">
-          <form class="login-form">
+          <form class="login-form" [formGroup]="fgValidador" (ngSubmit)="IdentificarUsuario()">
             <div class="row">
             </div>
             <div class="row">
               <div class="input-field col s12">
                 <i class="material-icons prefix">mail_outline</i>
-                <input class="validate" id="txtcorreo" type="email">
+                <input class="validate" id="txtcorreo" type="email" formControlName="usuario">
                 <label for="txtcorreo" data-error="wrong" data-success="right">Correo Electrónico</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
                 <i class="material-icons prefix">lock_outline</i>
-                <input id="txtcontrasena" type="password">
+                <input id="txtcontrasena" type="password" formControlName="clave">
                 <label for="txtcontrasena">Contraseña</label>
               </div>
             </div>
-            <div class="row">          
-              <div class="input-field col s12 m12 l12  login-text">
-                  <input type="checkbox" id="remember-me" />
-                  <label for="remember-me">Remember me</label>
-              </div>
-            </div>
+       
             <div class="row">
               <div class="input-field col s12">
-                <a href="#" class="btn waves-effect waves-light col s12">Login</a>
+                
+                <button  [disabled]="!fgValidador.valid" class="btn waves-effect waves-light col s12" type="ngSubmit" name="action">Login
+                  <i class="material-icons right">send</i>
+                </button>
               </div>
             </div>
             <div class="row">
