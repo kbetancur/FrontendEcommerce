@@ -23,6 +23,10 @@ const routes: Routes = [
     component: CrearUsuarioComponent
   },
   {
+    path:"listar-productos",
+    component:BuscarProductoComponent
+  },
+  {
     path: "buscar-usuario",
     component:BuscarUsuarioComponent
   },
@@ -44,11 +48,11 @@ const routes: Routes = [
     component:BuscarProductoComponent
   },
   {
-    path:"editar-producto",
+    path:"editar-producto/:id",
     component:EditarProductoComponent
   },
   {
-    path:"eliminar-producto",
+    path:"eliminar-producto/:id",
     component:EliminarProductoComponent
   },
   {

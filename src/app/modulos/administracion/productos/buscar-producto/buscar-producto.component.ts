@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModeloProducto } from 'src/app/modelos/producto.modelo';
+import { ProductoService } from 'src/app/servicios/producto.service';
 
 @Component({
   selector: 'app-buscar-producto',
@@ -6,5 +8,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./buscar-producto.component.css']
 })
 export class BuscarProductoComponent {
+  
+  listadoRegistros: ModeloProducto[]=[];
+
+
+  constructor(private productoServicio: ProductoService){}
+
+  ngOnInit():void{
+    this.ObtenerListadoProductos();
+  }
+
+  ObtenerListadoProductos(){
+    this.productoServicio.ObtenerRegistros().subscribe((datos:ModeloProducto[]) =>{
+      this.listadoRegistros = datos;
+    })
+  }
 
 }

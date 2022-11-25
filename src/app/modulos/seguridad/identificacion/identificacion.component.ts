@@ -32,7 +32,8 @@ export class IdentificacionComponent implements OnInit {
     let usuario = this.fgValidador.controls["usuario"].value;
     let clave = this.fgValidador.controls["clave"].value;    
     let claveCifrada = cryptoJS.MD5(clave).toString();
-    
+    alert("clave sin cifrar: "+ clave);
+    alert("clave crifrada: "+ claveCifrada);    
     this.servicioSeguridad.Identificar(usuario, claveCifrada).subscribe((datos:any)=>{
        //OK
        alert("datos correctos");
@@ -41,6 +42,7 @@ export class IdentificacionComponent implements OnInit {
     }, (error:any)=>{
       //error
       alert("datos inválidos");
+      alert(error.message);
     });
 
     

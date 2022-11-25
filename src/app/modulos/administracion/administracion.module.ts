@@ -17,6 +17,7 @@ import { CrearProductoxcategoriaComponent } from './productosxcategorias/crear-p
 import { EditarProductoxcategoriaComponent } from './productosxcategorias/editar-productoxcategoria/editar-productoxcategoria.component';
 import { BuscarProductoxcategoriaComponent } from './productosxcategorias/buscar-productoxcategoria/buscar-productoxcategoria.component';
 import { EliminarProductoxcategoriaComponent } from './productosxcategorias/eliminar-productoxcategoria/eliminar-productoxcategoria.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -39,7 +40,9 @@ import { EliminarProductoxcategoriaComponent } from './productosxcategorias/elim
   ],
   imports: [
     CommonModule,
-    AdministracionRoutingModule
+    AdministracionRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdministracionModule { }
