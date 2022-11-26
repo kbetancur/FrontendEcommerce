@@ -9,7 +9,8 @@ import { SeguridadService } from './seguridad.service';
 })
 export class ProductoService {
 
-  url= "http://localhost:3000";
+  //url= "http://localhost:3000";
+  url="https://bkecommerce.onrender.com";
   token: String =  '';
 
   constructor(private http: HttpClient, private seguridadServicio: SeguridadService) {
