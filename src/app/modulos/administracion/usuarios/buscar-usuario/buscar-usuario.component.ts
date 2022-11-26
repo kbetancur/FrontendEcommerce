@@ -24,6 +24,7 @@ export class BuscarUsuarioComponent {
   ObtenerListadoUsuarios(){
     this.usuarioServicio.ObtenerRegistros().subscribe((datos:ModeloUsuario[]) =>{
       this.listadoUsuarios = datos;
+      
     })
   }
 

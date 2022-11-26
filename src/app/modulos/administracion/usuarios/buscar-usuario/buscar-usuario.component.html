@@ -5,7 +5,7 @@
 
 <table class="striped centered responsive-table">
     <thead>
-      <tr>
+      <tr>         
           
           <th>Cédula</th>
           <th>Nombre</th>
@@ -22,7 +22,8 @@
     </thead>
 
     <tbody>
-      <tr *ngFor="let u of listadoUsuarios">        
+      <tr *ngFor="let u of listadoUsuarios">          
+        
         <td>{{u.cedula}}</td>
         <td>{{u.nombre}}</td>
         <td>{{u.apellidos}}</td>

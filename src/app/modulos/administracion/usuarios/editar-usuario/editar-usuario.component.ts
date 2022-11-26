@@ -15,6 +15,7 @@ export class EditarUsuarioComponent implements OnInit  {
 
   fgValidador: FormGroup = this.fb.group({
     'id':['', [Validators.required]],
+    'contrasena':['', [Validators.required]],
     'cedula':['', [Validators.required]],
     'nombre':['', [Validators.required]],
     'apellidos':['', [Validators.required]],
@@ -30,7 +31,8 @@ export class EditarUsuarioComponent implements OnInit  {
     private router: Router, private route: ActivatedRoute){}
 
   ngOnInit():void {
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params['id'];  
+   
     this.BuscarUsuario();
   }
   
@@ -40,6 +42,7 @@ export class EditarUsuarioComponent implements OnInit  {
     this.servicioUsuario.ObtenerRegistroPorId(this.id).subscribe((datos: ModeloUsuario)=>{
       
     this.fgValidador.controls["id"].setValue(this.id);
+    this.fgValidador.controls["contrasena"].setValue(datos.contrasena);
     this.fgValidador.controls["cedula"].setValue(datos.cedula);
     this.fgValidador.controls["nombre"].setValue(datos.nombre);
     this.fgValidador.controls["apellidos"].setValue(datos.apellidos);
@@ -62,9 +65,11 @@ EditarUsuario(){
   let direccion = this.fgValidador.controls["direccion"].value;
   let telefono = this.fgValidador.controls["telefono"].value;
   let rol = this.fgValidador.controls["rol"].value;  
+  let contrasena = this.fgValidador.controls["contrasena"].value;  
   
   let u = new ModeloUsuario();
-  u.id=this.id;
+  u.id = this.id; 
+  u.contrasena=contrasena;
   u.cedula=cedula;
   u.nombre=nombre;
   u.apellidos=apellidos;
