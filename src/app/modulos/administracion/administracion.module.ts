@@ -18,6 +18,8 @@ import { EditarProductoxcategoriaComponent } from './productosxcategorias/editar
 import { BuscarProductoxcategoriaComponent } from './productosxcategorias/buscar-productoxcategoria/buscar-productoxcategoria.component';
 import { EliminarProductoxcategoriaComponent } from './productosxcategorias/eliminar-productoxcategoria/eliminar-productoxcategoria.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BuscarUsuarioComponent } from './usuarios/buscar-usuario/buscar-usuario.component';
+import { CrearUsuarioComponent } from './usuarios/crear-usuario/crear-usuario.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     EliminarUsuarioComponent,
     CrearProductoComponent,
     BuscarProductoComponent,
+    BuscarUsuarioComponent,
+    CrearUsuarioComponent,
     EditarProductoComponent,
     EliminarProductoComponent,
     CrearCategoriaComponent,

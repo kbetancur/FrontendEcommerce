@@ -1,1 +1,80 @@
-<p>editar-usuario works!</p>
+<h4 align="center">Editar de Usuario!</h4>
+
+<div class="row">
+  <form [formGroup]="fgValidador" class="col s12" (ngSubmit)="EditarUsuario()">
+    <input type="hidden" formControlName="id" />
+    
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">perm_contact_calendar</i>
+        <input formControlName="cedula" id="txtcedula" type="text" class="validate" />
+        <label class="active" for="txtnombre">Cedula</label>
+      </div>
+
+      <div class="input-field col s6">
+        <i class="material-icons prefix">email</i>
+        <input formControlName="correo" id="txtcorreo" type="text" class="validate" />
+        <label class="active" for="txtcorreo">Correo Electrónico</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <input formControlName="nombre" id="txtnombre" type="text" class="validate" />
+        <label class="active" for="txtnombre">Nombre</label>
+      </div>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <input formControlName="apellidos" id="txtapellidos" type="tel" class="validate" />
+        <label class="active" for="txtapellidos">Apellidos</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">location_city</i>
+        <input formControlName="departamento" id="txtdepartamento" type="tel" class="validate" />
+        <label class="active" for="txtdepartamento">Departamento</label>
+      </div>
+
+      <div class="input-field col s6">
+        <i class="material-icons prefix">location_city</i>
+        <input formControlName="ciudad" id="txtciudad" type="tel" class="validate" />
+        <label class="active" for="txtciudad">Ciudad</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">location_on</i>
+        <input formControlName="direccion" id="txtdireccion" type="tel" class="validate" />
+        <label class="active" for="txtdireccion">Dirección</label>
+      </div>
+
+      <div class="input-field col s6">
+        <i class="material-icons prefix">phone</i>
+        <input formControlName="telefono" id="txttelefono" type="tel" class="validate" />
+        <label class="active" for="txttelefono">Teléfono</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">group</i>
+        <input formControlName="rol" id="txtdireccion" type="tel" class="validate" />
+        <label class="active" for="txtdireccion">Rol</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12" align="center">
+    <button [disabled]="!fgValidador.valid" class="btn waves-effect waves-light" type="submit" name="action">Guardar
+        <i class="material-icons right">send</i>
+      </button>
+      </div>
+      </div>
+
+  </form>
+</div>
+

@@ -5,7 +5,7 @@
       ><i class="material-icons">menu</i></a
     >
     <ul class="right hide-on-med-and-down">
-      <li *ngIf="seInicioSesion"><a routerLink="/administracion/usuarios">Usuarios</a></li>
+      <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-usuarios">Usuarios</a></li>
       <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-productos">Productos</a></li>
       <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/login">Login</a></li>
       <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesión</a></li>

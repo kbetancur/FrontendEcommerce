@@ -27,16 +27,21 @@ const routes: Routes = [
     component:BuscarProductoComponent
   },
   {
+    path:"listar-usuarios",
+    component:BuscarUsuarioComponent
+  },
+
+  {
     path: "buscar-usuario",
     component:BuscarUsuarioComponent
   },
   
   {
-    path:"editar-usuario",
+    path:"editar-usuario/:id",
     component:EditarUsuarioComponent
   },
   {
-    path:"eliminar-usuario",
+    path:"eliminar-usuario/:id",
     component:EliminarUsuarioComponent
   },
   {
